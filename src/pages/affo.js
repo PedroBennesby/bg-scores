@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowBendUpLeft } from '@phosphor-icons/react';
+import Link from 'next/link';
 
 export default function Affo() {
   const [score, setScore] = useState(0);
@@ -71,9 +72,9 @@ export default function Affo() {
   console.log(score);
   return (
     <div className='px-10 pt-10'>
-      <a href='/'>
+      <Link href='/'>
         <ArrowBendUpLeft size={60} color='black' />
-      </a>
+      </Link>
 
       <div className='flex mt-20 flex-col'>
         <div className=' text-2xl'>
