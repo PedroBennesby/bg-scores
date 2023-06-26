@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowBendUpLeft } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { NumberInput, ValueIncreaser } from '@/components';
+import { GoBack, NumberInput, ValueIncreaser } from '@/components';
 import Head from 'next/head';
 
 export default function Affo() {
@@ -67,10 +66,7 @@ export default function Affo() {
         <title>Um banquete para Odin</title>
       </Head>
       <div className='px-10 pt-10'>
-        <Link href='/'>
-          <ArrowBendUpLeft size={60} color='black' />
-        </Link>
-
+        <GoBack />
         <div className='flex mt-20 flex-col'>
           <div className=' text-2xl'>
             <h2 className='font-bold'>Navios:</h2>
