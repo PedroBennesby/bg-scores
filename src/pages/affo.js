@@ -70,7 +70,7 @@ export default function Affo() {
         <div className='flex mt-20 flex-col'>
           <div className=' text-2xl'>
             <h2 className='font-bold'>Navios:</h2>
-            <div className='flex gap-20 flex-col mt-11 items-center'>
+            <div className='flex gap-20 flex-col mt-11'>
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='baleeiro' name='baleeiro' itemValue={ships.baleeiro} state={setShips} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='knarr' name='knarr' itemValue={ships.knarr} state={setShips} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='dracar' name='dracar' itemValue={ships.dracar} state={setShips} />
@@ -79,17 +79,15 @@ export default function Affo() {
 
           <div>
             <h2 className='font-bold text-2xl mt-20'>Imigração:</h2>
-            <div className='flex gap-20 flex-col mt-11 items-center'>
+            <div className='flex gap-20 flex-col mt-11'>
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='knarr' name='knarr' itemValue={immigration.knarr} state={setImmigration} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='dracar' name='dracar' itemValue={immigration.dracar} state={setImmigration} />
             </div>
           </div>
 
-          <NumberInput displayName='Exploração' state={setIsland} onChangeFunction={handleTextValues} />
-
           <div>
             <h2 className='font-bold text-2xl mt-20'>Cabanas e Casas:</h2>
-            <div className='flex gap-20 flex-col mt-11 items-center'>
+            <div className='flex gap-20 flex-col mt-11'>
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Cabana' name='cabin' itemValue={cabins.cabin} state={setCabins} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Casa de Pedra' name='stoneHouse' itemValue={cabins.stoneHouse} state={setCabins} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Casa Longa' name='longHouse' itemValue={cabins.longHouse} state={setCabins} />
@@ -98,7 +96,7 @@ export default function Affo() {
 
           <div>
             <h2 className='font-bold text-2xl mt-20'>Animais:</h2>
-            <div className='flex gap-20 flex-col mt-11 items-center'>
+            <div className='flex gap-20 flex-col mt-11'>
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Ovelha' name='sheep' itemValue={animals.sheep} state={setAnimals} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Ovelha Prenhe' name='pregnantSheep' itemValue={animals.pregnantSheep} state={setAnimals} />
               <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Vaca' name='cow' itemValue={animals.cow} state={setAnimals} />
@@ -106,12 +104,13 @@ export default function Affo() {
             </div>
           </div>
 
-          <NumberInput displayName='Ocupações' state={setOccupations} onChangeFunction={handleTextValues} />
-          <NumberInput displayName='Prata' state={setCoins} onChangeFunction={handleTextValues} />
-          <NumberInput displayName='Renda Final' state={setFinalIncome} onChangeFunction={handleTextValues} />
-          <span className='divide-y divide-black' />
-          <NumberInput displayName='Pontos Negativos' state={setNegativePoints} onChangeFunction={handleTextValues} />
-
+          <div className='flex flex-col gap-20 mt-20'>
+            <NumberInput displayName='Exploração' state={setIsland} onChangeFunction={handleTextValues} />
+            <NumberInput displayName='Ocupações' state={setOccupations} onChangeFunction={handleTextValues} />
+            <NumberInput displayName='Prata' state={setCoins} onChangeFunction={handleTextValues} />
+            <NumberInput displayName='Renda Final' state={setFinalIncome} onChangeFunction={handleTextValues} />
+            <NumberInput displayName='Pontos Negativos' state={setNegativePoints} onChangeFunction={handleTextValues} />
+          </div>
           <div>
             <h2 className='font-bold text-2xl mt-20'>Total:</h2>
             <h3 className='text-center mt-2 font-bold text-xl'>{score}</h3>

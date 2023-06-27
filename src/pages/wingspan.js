@@ -28,7 +28,7 @@ export default function Wingspan() {
       <div className='px-10 mt-10'>
         <GoBack />
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col mt-20 gap-20'>
           <NumberInput displayName='Pássaros' state={setBirds} onChangeFunction={handleTextValues} />
           <NumberInput displayName='Cartas Bônus' state={setBonusCards} onChangeFunction={handleTextValues} />
           <NumberInput displayName='Objetivos de Final de rodada' state={setObjectives} onChangeFunction={handleTextValues} />
