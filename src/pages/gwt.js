@@ -50,7 +50,7 @@ export default function Gwt() {
         <GoBack />
 
         <div className='flex flex-col mt-20 gap-20'>
-          <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='5 Dólares' name='dollars' itemValue={dollars} state={setDollars} singleValue />
+          <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='5 Dólares' name='dollars' itemValue={dollars} state={setDollars} incrementValue={5} singleValue />
 
           <ValueIncreaser handleDecrease={handleValueDecreaser} handleIncrease={handleValueIncreaser} displayName='Trabalhadores' name='workers' itemValue={workers} incrementValue={4} state={setWorkers} singleValue />
 

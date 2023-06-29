@@ -21,6 +21,9 @@ export default function Home() {
         <Link href='/gwt' className='pt-10 '>
           <Image src='/images/gwt-logo.png' width={300} height={300} alt='Great Western Trail logo' />
         </Link>
+        <Link href='/agricola' className='pt-10 '>
+          <Image src='/images/agricola-logo.png' width={300} height={300} alt='Agricola Trail logo' />
+        </Link>
       </main>
     </>
   );
